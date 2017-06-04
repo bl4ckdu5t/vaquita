@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "color-no-invalid-hex": true,
+    "unit-whitelist": ["em", "rem", "%", "px", "s", "vh", "vw", "vmin"],
+    "max-empty-lines": 2,
+    "length-zero-no-unit": true,
+    "color-hex-case": "lower",
+    "no-duplicate-selectors": true,
+    "no-extra-semicolons": true,
+    "no-eol-whitespace": true,
+    "no-unknown-animations": true,
+    "selector-no-id": true,
+    "declaration-no-important": true
+  }
+}

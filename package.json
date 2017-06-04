@@ -1,0 +1,65 @@
+{
+  "name": "vaquita",
+  "version": "0.1.0",
+  "description": "Design Review App",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "if [ \"$NODE_ENV\" = production ]; then node bin/www; else webpack-dev-server; fi",
+    "test": "jest",
+    "testcoverage": "jest --coverage",
+    "build": "webpack"
+  },
+  "repository": {
+    "url": "git+https://github.com/bl4ckdu5t/vaquita.git",
+    "type": "git"
+  },
+  "keywords": [
+    "design",
+    "review"
+  ],
+  "author": "Joseph Rex <joerexko@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://vaquita.now.sh",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "morgan": "^1.8.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.4.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.26.4",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-loader": "^1.6.3",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.10.1",
+    "html-webpack-plugin": "^2.28.0",
+    "image-webpack-loader": "^3.3.0",
+    "jest": "^19.0.2",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-custom-properties": "^6.0.1",
+    "postcss-import": "^9.1.0",
+    "postcss-loader": "^1.3.3",
+    "postcss-nested": "^1.0.0",
+    "style-loader": "^0.13.2",
+    "stylelint": "^7.9.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}
