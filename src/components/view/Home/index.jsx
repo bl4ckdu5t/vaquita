@@ -1,16 +1,16 @@
 import React from 'react';
-import glamorous from 'glamorous';
+import styled from 'styled-components';
 import '../../../styles.css';
 
-const Hero = glamorous.div({
-  background: '#caa',
-  padding: '1rem',
-});
+const Hero = styled.div`
+  background: #4caf3d;
+  padding: 1rem;
+`;
 
-const Footer = glamorous.div({
-  background: '#348',
-  padding: '1rem',
-});
+const Footer = styled.div`
+  background: #348;
+  padding: 1rem;
+`;
 
 const Home = () => (
   <div>
