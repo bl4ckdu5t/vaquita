@@ -19,7 +19,7 @@ var config = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader?modules&camelCase&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+          use: 'css-loader'
         })
       },
       {
@@ -63,18 +63,6 @@ var config = {
     new HtmlWebpackPlugin({
       template: 'src/template.ejs'
     }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        postcss: [
-          require('autoprefixer'),
-          require('postcss-custom-properties'),
-          require('postcss-custom-media'),
-          require('postcss-nested'),
-          require('postcss-import'),
-          require('stylelint')
-        ]
-      }
-    })
   ]
 };
 

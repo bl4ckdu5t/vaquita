@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 html{
+  --brand-color-1: #238693;
+  --brand-color-2: #133358;
+  --brand-color-3: #c89;
   font-size: 62.5%;
 }
 body{

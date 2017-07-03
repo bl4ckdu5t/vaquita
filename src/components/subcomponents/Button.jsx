@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Button = styled.button`
   display: inline-block;
@@ -12,6 +12,10 @@ const Button = styled.button`
   text-decoration: none;
   font-size: 1.6rem;
   cursor: pointer;
+  ${props => props.solarized && css`
+    background: white;
+    color: var(--brand-color-3);
+  `}
 `;
 
 export default Button;

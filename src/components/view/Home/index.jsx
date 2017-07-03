@@ -4,12 +4,9 @@ import '../../../styles.css';
 
 import Button from '../../subcomponents/Button';
 
-const brandColor1 = '#238693';
-const brandColor2 = 'hsl(212, 65%, 21%)';
-
 const Hero = styled.div`
   position: relative;
-  background: linear-gradient(to bottom, ${brandColor1}, ${brandColor2});
+  background: linear-gradient(to bottom, var(--brand-color-1), var(--brand-color-2));
   height: 500px;
   padding: 1rem;
   color: white;
@@ -40,6 +37,7 @@ const Home = () => (
       <h1>Design reviews for teams and hobbyists</h1>
       <h2>Invite friends to tell you what they think about your design</h2>
       <Button>Hi there</Button>
+      <Button solarized>Yo dawg!</Button>
       <Shaped />
     </Hero>
     <Footer>
