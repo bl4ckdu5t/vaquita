@@ -5,7 +5,7 @@ const Button = styled.button`
   margin: 0 1rem;
   padding: 1rem 4rem 1.2rem;
   background: var(--brand-color-3);
-  color: white;
+  color: #fff;
   border: solid .2rem var(--brand-color-3);
   border-radius: .3rem;
   text-align: center;
@@ -18,8 +18,8 @@ const Button = styled.button`
     transform: translateY(-2px);
   }
   ${props => props.solarized && css`
-    background: white;
-    border-color: white;
+    background: #fff;
+    border-color: #fff;
     color: var(--brand-color-2);
   `}
   ${props => props.cta && css`
