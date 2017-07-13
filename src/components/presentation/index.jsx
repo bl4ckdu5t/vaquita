@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Grid, GridCol } from 'griz';
 import '../../styles.css';
 
-import { Grid, GridCol } from '../../utils/grid';
 import Button from '../../utils/button';
 
 const Hero = styled.div`
@@ -12,7 +12,16 @@ const Hero = styled.div`
   padding: 6rem 2rem 2rem;
   color: #fff;
   text-align: center;
-  clip-path: polygon(0 100%, 0 0, 100% 0, 100% calc(100% - 100px));
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width=%22100%25%22 height=%22100%22 viewBox=%220 0 800 600%22 xmlns=%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 preserveAspectRatio=%22none%22%3E%3Cpath d=%22M800 0v600H0L800 0z%22 fill=%22%23092238%22%2F%3E%3C%2Fsvg%3E");
+  }
   header{
     margin-bottom: 10rem;
   }
