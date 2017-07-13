@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../../../styles.css';
+import '../../styles.css';
 
-import Button from '../../ui/Button';
+import { Grid, GridCol } from '../../utils/grid';
+import Button from '../../utils/button';
 
 const Hero = styled.div`
   position: relative;
@@ -41,7 +42,19 @@ const Home = () => (
   <div>
     <Hero>
       <header>
-        <span>AlleyHoop</span>
+        <Grid>
+          <GridCol column="10">
+            <span>AlleyHoop</span>
+          </GridCol>
+          <GridCol column="90">
+            <span>AlleyHoop</span>
+          </GridCol>
+        </Grid>
+        <Grid>
+          <GridCol>
+            <span>AlleyHoop</span>
+          </GridCol>
+        </Grid>
       </header>
       <h1>Design reviews for teams and hobbyists</h1>
       <h2 className="light-type">Invite friends to tell you what they think about your design</h2>

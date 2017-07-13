@@ -1,5 +1,5 @@
 {
-  "name": "vaquita",
+  "name": "alleyhoop",
   "version": "0.1.0",
   "description": "Design Review App",
   "main": "src/index.js",
@@ -10,7 +10,7 @@
     "build": "webpack"
   },
   "repository": {
-    "url": "git+https://github.com/bl4ckdu5t/vaquita.git",
+    "url": "git+https://github.com/josephrexme/alleyhoop.git",
     "type": "git"
   },
   "keywords": [
@@ -19,7 +19,7 @@
   ],
   "author": "Joseph Rex <joerexko@gmail.com>",
   "license": "GPL-3.0",
-  "homepage": "https://vaquita.now.sh",
+  "homepage": "https://alleyhoop.now.sh",
   "dependencies": {
     "body-parser": "^1.17.1",
     "dotenv": "^4.0.0",

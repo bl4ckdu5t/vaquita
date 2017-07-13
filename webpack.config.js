@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
 var config = {
-  entry: './src/index.js',
+  entry: './src/index.jsx',
 
   output: {
     filename: 'bundle.js',
