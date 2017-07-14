@@ -51,16 +51,11 @@ const Home = () => (
   <div>
     <Hero>
       <header>
-        <Grid>
+        <Grid responsiveMd>
           <GridCol column="10">
             <span>AlleyHoop</span>
           </GridCol>
           <GridCol column="90">
-            <span>AlleyHoop</span>
-          </GridCol>
-        </Grid>
-        <Grid>
-          <GridCol>
             <span>AlleyHoop</span>
           </GridCol>
         </Grid>
