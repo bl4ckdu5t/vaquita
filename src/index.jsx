@@ -7,7 +7,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
-import Home from './components/presentation/index';
+import Home from './components/Home';
 
 render((
   <Router>
