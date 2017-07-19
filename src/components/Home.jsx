@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid, GridCol } from 'griz';
+import darken from 'polished/lib/color/darken';
 import '../styles.css';
 
 import Button from '../utils/button';
@@ -23,6 +24,7 @@ const Hero = styled.div`
     width: 100%;
     height: 10rem;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width=%22100%25%22 height=%22100%22 viewBox=%220 0 800 600%22 xmlns=%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 preserveAspectRatio=%22none%22%3E%3Cpath d=%22M800 0v600H0L800 0z%22 fill=%22%23092238%22%2F%3E%3C%2Fsvg%3E");
+    background-size: 100% 100%;
   }
   header{
     margin-bottom: 8rem;
@@ -47,6 +49,7 @@ const Process = styled.section`
     width: 100%;
     height: 10rem;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 800 600' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath d='M0%2C0l0%2C600l800%2C0l-800%2C-600Z' style='fill:%230c3050%3B'/%3E%3C/svg%3E");
+    background-size: 100% 100%;
   }
 `;
 
@@ -67,6 +70,12 @@ const Footer = styled.div`
   text-align: center;
   div{
     margin-bottom: 4rem;
+  }
+  a{
+    color: ${darken(0.1, '#9EB0C3')};
+    &:hover{
+      color: ${darken(0.2, '#9EB0C3')};
+    }
   }
 `;
 
@@ -109,7 +118,7 @@ const Home = () => (
     </Alleys>
     <Footer>
       <div>
-        <p>Built and Designed by Joseph Rex</p>
+        <p>Built and Designed by <a href="http://josephrex.me">Joseph Rex</a></p>
         <p>Social Icons</p>
       </div>
       <p>© Copyright 2017 AlleyHoop</p>
