@@ -4,13 +4,14 @@ import { Grid, GridCol } from 'griz';
 import '../styles.css';
 
 import Button from '../utils/button';
+import Float from '../utils/float';
 import AlleyList from './AlleyList';
 
 const Hero = styled.div`
   position: relative;
   background: linear-gradient(to bottom, var(--brand-color-1), var(--brand-color-2));
-  height: 67rem;
-  padding: 6rem 2rem 2rem;
+  min-height: 67rem;
+  padding: 4rem 2rem 2rem;
   color: #fff;
   text-align: center;
   &::after{
@@ -24,7 +25,7 @@ const Hero = styled.div`
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width=%22100%25%22 height=%22100%22 viewBox=%220 0 800 600%22 xmlns=%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 preserveAspectRatio=%22none%22%3E%3Cpath d=%22M800 0v600H0L800 0z%22 fill=%22%23092238%22%2F%3E%3C%2Fsvg%3E");
   }
   header{
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
   }
 `;
 
@@ -61,8 +62,12 @@ const Alleys = Process.extend`
 `;
 
 const Footer = styled.div`
-  padding: 2rem;
+  padding: 5rem;
   color: #9EB0C3;
+  text-align: center;
+  div{
+    margin-bottom: 4rem;
+  }
 `;
 
 const recentUploads = [
@@ -78,12 +83,14 @@ const Home = () => (
   <div>
     <Hero>
       <header>
-        <Grid responsiveMd>
+        <Grid>
           <GridCol column="10">
             <span>AlleyHoop</span>
           </GridCol>
           <GridCol column="90">
-            <span>AlleyHoop</span>
+            <Float>
+              <Button>Login</Button>
+            </Float>
           </GridCol>
         </Grid>
       </header>
@@ -101,7 +108,11 @@ const Home = () => (
       <AlleyList items={recentUploads} />
     </Alleys>
     <Footer>
-      <p>© Copyright 2017 Vaquita</p>
+      <div>
+        <p>Built and Designed by Joseph Rex</p>
+        <p>Social Icons</p>
+      </div>
+      <p>© Copyright 2017 AlleyHoop</p>
     </Footer>
   </div>
 );

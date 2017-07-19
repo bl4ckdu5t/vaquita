@@ -5,12 +5,15 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path = require('path');
 
 var config = {
-  entry: './src/index.jsx',
+  entry: [
+    'webpack-hot-middleware/client?path=__webpack_hmr&timeout=4000',
+    './src/index.jsx'
+  ],
 
   output: {
     filename: 'bundle.js',
-    path: path.resolve('./dist'),
-    libraryTarget: 'umd'
+    path: path.resolve('./public'),
+    publicPath: '/'
   },
 
   module: {
@@ -60,6 +63,7 @@ var config = {
 
   plugins: [
     new ExtractTextPlugin({ filename: 'bundle.css', allChunks: true }),
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/template.ejs'
     }),

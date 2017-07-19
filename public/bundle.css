@@ -1,0 +1,44 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  --brand-color-1: #238693;
+  --brand-color-2: #133358;
+  --brand-color-3: #c33319;
+  font-size: 62.5%;
+}
+body{
+  margin: 0;
+  font: 400 1.6rem/1.5 'Roboto Condensed', sans-serif;
+  background: #092238;
+}
+/* Typography */
+h1, h2, h3, h4, h5, h6, p{
+  margin: 1rem 0;
+}
+h1{
+  font-size: 3.6rem;
+}
+h2{
+  font-size: 2.8rem;
+}
+h3{
+  font-size: 2.4rem;
+}
+h4{
+  font-size: 2.0rem;
+}
+h5{
+  font-size: 1.8rem;
+}
+h6{
+  font-size: 1.6rem;
+}
+.light-type{
+  font-weight: lighter;
+}
+.bold-type{
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=bundle.css.map*/
