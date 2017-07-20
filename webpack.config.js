@@ -57,13 +57,10 @@ var config = {
 
   devtool: "source-map",
 
-  devServer: {
-    historyApiFallback: true
-  },
-
   plugins: [
     new ExtractTextPlugin({ filename: 'bundle.css', allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/template.ejs'
     }),

@@ -14,7 +14,9 @@ const app = express();
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
   filename: 'bundle.js',
-  publicPath: config.output.publicPath
+  publicPath: config.output.publicPath,
+  stats: { colors: true },
+  historyApiFallback: true
 }));
 
 app.use(webpackHotMiddleware(compiler, {
