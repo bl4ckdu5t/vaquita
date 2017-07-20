@@ -98,14 +98,14 @@ const Home = () => (
           </GridCol>
           <GridCol column="90">
             <Float>
-              <Button>Login</Button>
+              <Button to="/home" effect="lift">Login</Button>
             </Float>
           </GridCol>
         </Grid>
       </header>
       <h1>Design reviews for teams and hobbyists</h1>
       <h2 className="light-type">Invite friends to tell you what they think about your design</h2>
-      <Button cta>Upload without sign up</Button>
+      <Button effect="lift" cta>Upload without sign up</Button>
       <p><small className="light-type">You need an account for organized and private alleys</small></p>
     </Hero>
     <Process>
