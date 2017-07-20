@@ -98,7 +98,7 @@ const Home = () => (
           </GridCol>
           <GridCol column="90">
             <Float>
-              <Button to="/home" effect="lift">Login</Button>
+              <Button href="/home" effect="lift">Login</Button>
             </Float>
           </GridCol>
         </Grid>

@@ -1,7 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
-import _pick from 'lodash/pick';
 
 const effects = effectName => (
   {
@@ -16,32 +14,32 @@ const effects = effectName => (
   }[effectName]
 );
 
-const Button = (props) => {
-  const el = props.to ? Link : 'button';
-  const ButtonPrimitive = styled(el)`
-    display: inline-block;
-    margin: 0 1rem;
-    padding: 1rem 4rem 1rem;
-    background: var(--brand-color-3);
-    color: #fff;
-    border: solid .2rem var(--brand-color-3);
-    border-radius: .3rem;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Roboto Condensed', 'PT Sans', sans-serif;
-    font-size: 1.6rem;
-    cursor: pointer;
-    ${effects(props.effect)}
-    ${props.solarized && css`
-      background: #fff;
-      border-color: #fff;
-      color: var(--brand-color-2);
-    `}
-    ${props.cta && css`
-      margin: 4rem 0 1rem;
-    `}
-  `;
-  return <ButtonPrimitive {..._pick(props, ['to', 'children', 'type'])} />;
-};
+const ButtonButton = styled.button`
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 1rem 4rem 1rem;
+  background: var(--brand-color-3);
+  color: #fff;
+  border: solid .2rem var(--brand-color-3);
+  border-radius: .3rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', 'PT Sans', sans-serif;
+  font-size: 1.6rem;
+  cursor: pointer;
+  ${props => effects(props.effect)}
+  ${props => props.solarized && css`
+    background: #fff;
+    border-color: #fff;
+    color: var(--brand-color-2);
+  `}
+  ${props => props.cta && css`
+    margin: 4rem 0 1rem;
+  `}
+`;
+
+const ButtonA = ButtonButton.withComponent('a');
+
+const Button = props => (props.href ? <ButtonA {...props} /> : <ButtonButton {...props} />);
 
 export default Button;
