@@ -5,6 +5,7 @@ import darken from 'polished/lib/color/darken';
 import '../styles.css';
 
 import Button from '../utils/button';
+import Icon from '../utils/icon';
 import Float from '../utils/float';
 import AlleyList from './AlleyList';
 
@@ -77,6 +78,15 @@ const Footer = styled.div`
       color: ${darken(0.2, '#9EB0C3')};
     }
   }
+  ul{
+    margin: 3rem 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  li{
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
 `;
 
 const recentUploads = [
@@ -119,7 +129,18 @@ const Home = () => (
     <Footer>
       <div>
         <p>Built and Designed by <a href="http://josephrex.me">Joseph Rex</a></p>
-        <p>Social Icons</p>
+        <ul>
+          <li>
+            <a href="">
+              <Icon id="icon-github" color="#9EB0C3" />
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <Icon id="icon-twitter" color="#9EB0C3" />
+            </a>
+          </li>
+        </ul>
       </div>
       <p>© Copyright 2017 AlleyHoop</p>
     </Footer>
