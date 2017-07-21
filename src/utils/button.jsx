@@ -16,7 +16,6 @@ const effects = effectName => (
 
 const ButtonButton = styled.button`
   display: inline-block;
-  margin: 0 1rem;
   padding: 1rem 4rem 1rem;
   background: var(--brand-color-3);
   color: #fff;
@@ -26,7 +25,11 @@ const ButtonButton = styled.button`
   text-decoration: none;
   font-family: 'Roboto Condensed', 'PT Sans', sans-serif;
   font-size: 1.6rem;
+  line-height: normal;
   cursor: pointer;
+  + *{
+    margin-left: .5rem;
+  }
   ${props => effects(props.effect)}
   ${props => props.solarized && css`
     background: #fff;

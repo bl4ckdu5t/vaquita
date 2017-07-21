@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Grid, GridCol } from 'griz';
 import darken from 'polished/lib/color/darken';
@@ -29,6 +30,7 @@ const Hero = styled.div`
   }
   header{
     margin-bottom: 8rem;
+    text-align: left;
   }
 `;
 
@@ -60,8 +62,8 @@ const Alleys = Process.extend`
   &::after{
     display: none;
   }
-  h2{
-    color: #304F71;
+  h1{
+    color: #446d9a;
   }
 `;
 
@@ -103,10 +105,13 @@ const Home = () => (
     <Hero>
       <header>
         <Grid>
-          <GridCol column="10">
-            <span>AlleyHoop</span>
+          <GridCol column="15">
+            <Link to="/">
+              <Icon id="logo" width="35px" height="60px" style={{ marginTop: '-15px' }} />
+              <span>AlleyHoop</span>
+            </Link>
           </GridCol>
-          <GridCol column="90">
+          <GridCol column="85">
             <Float>
               <Button href="/home" effect="lift">Login</Button>
             </Float>
@@ -123,7 +128,7 @@ const Home = () => (
       <h1>Constructive feedbacks with love</h1>
     </Process>
     <Alleys>
-      <h2>Start making hoops</h2>
+      <h1>Start making hoops</h1>
       <AlleyList items={recentUploads} />
     </Alleys>
     <Footer>

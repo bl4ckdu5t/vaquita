@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Svg = styled.svg`
   display: inline-block;
   vertical-align: middle;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: ${props => props.width || '3.5rem'};
+  height: ${props => props.height || '3.5rem'};
   fill: ${props => props.color || '#fff'}
 `;
 
