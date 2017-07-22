@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const helmet = require('helmet');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
+const dotenv = require('dotenv').config();
 const config = require('./webpack.config.js');
 const compiler = webpack(config);
 
@@ -11,18 +12,22 @@ const port = 7700;
 
 const app = express();
 
-app.use(webpackDevMiddleware(compiler, {
-  hot: true,
-  filename: 'bundle.js',
-  publicPath: config.output.publicPath,
-  stats: { colors: true },
-  historyApiFallback: true
-}));
+if(process.env.NODE_ENV === 'development'){
 
-app.use(webpackHotMiddleware(compiler, {
-  path: '/__webpack_hmr',
-  heartbeat: 2000
-}));
+  app.use(webpackDevMiddleware(compiler, {
+    hot: true,
+    filename: 'bundle.js',
+    publicPath: config.output.publicPath,
+    stats: { colors: true },
+    historyApiFallback: true
+  }));
+
+  app.use(webpackHotMiddleware(compiler, {
+    path: '/__webpack_hmr',
+    heartbeat: 2000
+  }));
+
+}
 
 app.use(helmet());
 app.engine('html', require('ejs').renderFile);

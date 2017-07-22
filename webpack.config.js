@@ -1,14 +1,18 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var dotenv = require('dotenv').config();
 
 var path = require('path');
+var entries = ['./src/index.jsx'];
+
+if(process.env.NODE_ENV === 'development'){
+  entries.push('webpack-hot-middleware/client?path=__webpack_hmr&timeout=4000');
+}
+console.log(entries);
 
 var config = {
-  entry: [
-    'webpack-hot-middleware/client?path=__webpack_hmr&timeout=4000',
-    './src/index.jsx'
-  ],
+  entry: entries,
 
   output: {
     filename: 'bundle.js',
