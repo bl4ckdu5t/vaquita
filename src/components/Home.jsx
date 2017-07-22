@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Grid, GridCol } from 'griz';
-import darken from 'polished/lib/color/darken';
+import { darken } from 'polished';
 import '../styles.css';
 
 import Button from '../utils/button';
