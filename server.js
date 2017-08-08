@@ -1,18 +1,19 @@
 const express = require('express');
 const path = require('path');
-const webpack = require('webpack');
 const helmet = require('helmet');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
 const dotenv = require('dotenv').config();
-const config = require('./webpack.config.js');
-const compiler = webpack(config);
 
 const port = 7700;
 
 const app = express();
 
 if(process.env.NODE_ENV === 'development'){
+
+  const webpack = require('webpack');
+  const config = require('./webpack.config.js');
+  const compiler = webpack(config);
+  const webpackDevMiddleware = require('webpack-dev-middleware');
+  const webpackHotMiddleware = require('webpack-hot-middleware');
 
   app.use(webpackDevMiddleware(compiler, {
     hot: true,
